@@ -1,0 +1,6 @@
+from django.contrib.auth.models import User
+user = User.objects.get(username='mike.tech')
+print(f"is_staff: {user.is_staff}")
+print(f"is_superuser: {user.is_superuser}")
+print(f"Groups: {list(user.groups.all())}")
+exit()
